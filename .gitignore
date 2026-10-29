@@ -1,0 +1,17 @@
+dist/
+previews/
+backups/
+Assets/AppIcon.iconset/
+.DS_Store
+.env
+.env.*
+*.log
+Vendor/
+*.pem
+*.key
+*.p12
+*.p8
+*.ed25519
+.private/
+__pycache__/
+*.pyc

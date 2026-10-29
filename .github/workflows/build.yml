@@ -1,0 +1,16 @@
+name: Build and verify
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  universal:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Universal application (no release private key)
+        run: zsh build.sh
+      - name: Verify architecture, icon and update security
+        run: python3 scripts/verify-release.py
